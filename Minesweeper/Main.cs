@@ -1,3 +1,4 @@
+//TODO: Get rid of Scene and Script "Main" as they do nothing in this finalized inplementation
 using Godot;
 using System;
 
