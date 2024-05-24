@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://stg45pe3vt3q"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_hyw78"]
+[ext_resource type="PackedScene" uid="uid://cchrr5x2gvjmh" path="res://SweeperTileMap.tscn" id="2_hv35p"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_hyw78")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="SweeperTileMap" parent="." instance=ExtResource("2_hv35p")]
+scale = Vector2(4, 4)
+layer_0/name = "Lower"
+layer_0/navigation_enabled = false
+layer_0/tile_data = PackedInt32Array()

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cchrr5x2gvjmh"]
+
+[ext_resource type="TileSet" uid="uid://ctu8kwvwgwiv2" path="res://SweeperTileSet.tres" id="1_pkr6f"]
+[ext_resource type="Script" path="res://SweeperTileMap.cs" id="2_lwyk7"]
+
+[node name="SweeperTileMap" type="TileMap"]
+scale = Vector2(2, 2)
+tile_set = ExtResource("1_pkr6f")
+format = 2
+layer_0/name = "Upper"
+layer_0/tile_data = PackedInt32Array(131073, 1, 0, 65538, 1, 0, 262147, 1, 0, 131075, 1, 0, 196613, 1, 0, 196610, 1, 0, 196609, 1, 0, 327683, 1, 0, 393221, 1, 0)
+layer_1/name = "Lower"
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("2_lwyk7")
+
+[node name="DoomTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="DoomTimer" to="." method="GimmeASec"]
